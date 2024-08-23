@@ -2,7 +2,9 @@ package br.com.emanueldias.CarParking.mapper
 
 import br.com.emanueldias.CarParking.dto.VeiculoRequestDTO
 import br.com.emanueldias.CarParking.model.Veiculo
+import org.springframework.stereotype.Component
 
+@Component
 class VeiculoRequestFromVeiculoMapper : Mapper<VeiculoRequestDTO, Veiculo> {
     override fun map(t: VeiculoRequestDTO): Veiculo {
         return Veiculo(
