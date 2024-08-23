@@ -12,6 +12,6 @@ data class Veiculo(
     val modelo : String,
     val placa : String,
     val numeroEstacionamento : Int,
-    @OneToOne
+    @OneToOne(cascade = [CascadeType.REMOVE])
     var dono : Dono? = null
 )

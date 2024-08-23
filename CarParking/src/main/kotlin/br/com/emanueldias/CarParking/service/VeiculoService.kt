@@ -42,4 +42,10 @@ class VeiculoService(
     fun getAllVeiculos(): List<VeiculoResponseDTO> {
         return veiculoRepository.findAll().stream().map { v -> veiculoFromVeiculoResponseMapper.map(v) }.toList()
     }
+
+    fun deleteVeiculo(id : Long){
+        val donoRef = veiculoRepository.getReferenceById(id).dono
+        veiculoRepository.deleteById(id)
+        donoService.deleteById(donoRef?.id)
+    }
 }

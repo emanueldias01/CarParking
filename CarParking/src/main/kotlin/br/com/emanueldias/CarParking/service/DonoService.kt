@@ -17,5 +17,9 @@ class DonoService(
         return donoRepository.findByNome(nome)
     }
 
+    fun deleteById(id: Long?) {
+        donoRepository.deleteById(id!!)
+    }
+
 
 }
