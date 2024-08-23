@@ -13,5 +13,5 @@ data class Veiculo(
     val placa : String,
     val numeroEstacionamento : Int,
     @OneToOne
-    val dono : Dono
+    var dono : Dono? = null
 )

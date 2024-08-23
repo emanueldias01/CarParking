@@ -12,5 +12,5 @@ data class Dono(
     val id : Long? = null,
     val nome : String,
     @OneToOne
-    val veiculo : Veiculo
+    var veiculo : Veiculo? = null
 )
