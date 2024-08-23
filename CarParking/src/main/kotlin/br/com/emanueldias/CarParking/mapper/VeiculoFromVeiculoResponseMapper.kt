@@ -1,6 +1,5 @@
 package br.com.emanueldias.CarParking.mapper
 
-import br.com.emanueldias.CarParking.dto.DonoResponseDTO
 import br.com.emanueldias.CarParking.dto.VeiculoResponseDTO
 import br.com.emanueldias.CarParking.model.Veiculo
 import br.com.emanueldias.CarParking.repository.DonoRepository

@@ -8,5 +8,5 @@ data class VeiculoRequestDTO(
     val modelo : String,
     val placa : String,
     val numeroEstacionamento : Int,
-    val donoRequestDTO : DonoRequestDTO
+    val dono : DonoRequestDTO
 )
