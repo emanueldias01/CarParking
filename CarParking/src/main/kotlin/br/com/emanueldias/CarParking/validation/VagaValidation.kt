@@ -11,7 +11,7 @@ class VagaValidation(
 ) {
 
     fun validaVaga(numeroVagaEscolhida : Int) : Boolean{
-        val listVagas = veiculoRepository.findAll().map { v -> veiculoFromVeiculoResponseMapper.map(v) }.toList()
+        val listVagas = veiculoRepository.findAll().map { veiculoFromVeiculoResponseMapper.map(it) }.toList()
         var cont = 0
 
         for(veiculo in listVagas){

@@ -45,7 +45,7 @@ class VeiculoService(
     }
 
     fun getAllVeiculos(): List<VeiculoResponseDTO> {
-        return veiculoRepository.findAll().stream().map { v -> veiculoFromVeiculoResponseMapper.map(v) }.toList()
+        return veiculoRepository.findAll().stream().map { veiculoFromVeiculoResponseMapper.map(it) }.toList()
     }
 
     fun deleteVeiculo(id : Long){
