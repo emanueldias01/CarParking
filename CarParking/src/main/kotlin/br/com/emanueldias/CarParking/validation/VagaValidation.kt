@@ -14,11 +14,7 @@ class VagaValidation(
         val listVagas = veiculoRepository.findAll().map { veiculoFromVeiculoResponseMapper.map(it) }.toList()
         var cont = 0
 
-        for(veiculo in listVagas){
-            if(veiculo.numeroEstacionamento == numeroVagaEscolhida)
-                cont++
-            break
-        }
+        listVagas.forEach { if(it.numeroEstacionamento == numeroVagaEscolhida) cont++ }
 
         return if(cont != 0){
             false
