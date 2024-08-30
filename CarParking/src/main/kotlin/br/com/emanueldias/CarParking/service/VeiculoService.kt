@@ -2,6 +2,7 @@ package br.com.emanueldias.CarParking.service
 
 import br.com.emanueldias.CarParking.dto.VeiculoRequestDTO
 import br.com.emanueldias.CarParking.dto.VeiculoResponseDTO
+import br.com.emanueldias.CarParking.handler.exceptions.VagaOcupadaException
 import br.com.emanueldias.CarParking.mapper.DonoRequestFromDonoMapper
 import br.com.emanueldias.CarParking.mapper.VeiculoFromVeiculoResponseMapper
 import br.com.emanueldias.CarParking.mapper.VeiculoRequestFromVeiculoMapper
@@ -39,7 +40,7 @@ class VeiculoService(
 
             return veiculoFromVeiculoResponseMapper.map(veiculoSave)
         } else{
-            throw RuntimeException("Esta vaga já está sendo usada")
+            throw VagaOcupadaException("Esta vaga já está sendo usada")
         }
 
     }
